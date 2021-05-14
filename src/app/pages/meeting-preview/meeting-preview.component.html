@@ -1,0 +1,27 @@
+<div class="page">
+  <div class="d-flex flex-row flex-wrap w-100 justify-content-center">
+    <app-camera-preview></app-camera-preview>
+    <div class="meeting-actions-container d-flex flex-column align-items-center w-25 justify-content-md-center mt-sm-5">
+      <div class="meeting-info">
+        <h5>Meeting Ready</h5>
+        <form [formGroup]="connectionInfoForm" (ngSubmit)="onJoinMeeting()">
+          <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Channel</span>
+            </div>
+            <input type="text" class="form-control" formControlName="channel">
+          </div>
+          <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Link</span>
+            </div>
+            <input type="text" class="form-control" formControlName="link">
+          </div>
+          <div class="button-container">
+            <button type="submit" class="btn btn-primary">Join Now</button>
+          </div>
+        </form>
+      </div> 
+    </div>
+  </div>
+</div>

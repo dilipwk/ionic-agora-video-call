@@ -1,0 +1,38 @@
+.views-container {
+  margin: 0;
+  padding-top: 1rem;
+}
+
+.controls-container {
+  width: 100%;
+}
+
+.pinned-container {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .pinned-container {
+    width: 65%;
+  }
+}
+
+.side-container {
+  overflow-y: scroll;
+}
+
+.meeting-description-container {
+  position: absolute;
+  left: .5rem;
+  bottom: 0;
+  height: 3rem;
+  padding: 10px;
+  background-color: white;
+  border-top-right-radius: .5rem;
+  box-shadow: 5px -5px 10px rgba(0, 0, 0, .35);
+}
+
+.meeting-description-container h4 {
+  font-weight: 300;
+}
+

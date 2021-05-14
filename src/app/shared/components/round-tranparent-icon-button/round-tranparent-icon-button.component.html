@@ -1,0 +1,8 @@
+<a (click)="click()">
+  <div class="container" [ngStyle]="isActive ? buttonStyle.active : {}">
+    <fa-icon
+      [icon]="isActive ? activeIcon : inactiveIcon"
+      [styles]="isActive ? activeIconStyle : inactiveIconStyle"
+    ></fa-icon>
+  </div>
+</a>

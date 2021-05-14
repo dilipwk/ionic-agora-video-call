@@ -1,0 +1,18 @@
+<div class="view-container" (mouseover)="showControls(true)" (mouseleave)="showControls(false)">
+    <div [appAgoraVideoPlayer]="trackoptions" class="video">
+    </div>
+    <div class="control-container d-flex flex-row justify-content-center align-items-center" *ngIf="isRemote()">
+        <app-meeting-participant-controls 
+        [show]="controlsVisible"
+        (camOff)="onCamOff()"
+        (micMute)="onMicMute()"
+        (pin)="onPin()">
+        </app-meeting-participant-controls>
+    </div>
+    <div class="mic-status" *ngIf="isRemote() && !micStatus">
+        <fa-icon [icon]="micMuteIcon" [styles]="{stroke: 'white', color: 'white'}"></fa-icon>
+    </div>
+    <div class="sound-meter" *ngIf="isRemote() && micStatus">
+        <app-sound-visualizer [mediaStream]="audioStream"></app-sound-visualizer>
+    </div>
+</div>
