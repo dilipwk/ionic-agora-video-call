@@ -70,10 +70,10 @@ export class MeetingPreviewComponent implements OnInit, OnDestroy {
       const joinLink = this.tokeService.getLink(channel);
       let meetinglink = location.origin+"/#/meeting?link="+ joinLink;
       setTimeout(function(){
-        alert(`Link copied, You can Invite other people using the link: ${meetinglink}`);
+        alert(`Code copied, You can Invite other people using the code: ${joinLink}`);
      }, 1000)
-     navigator.clipboard.writeText(meetinglink).then().catch(e => console.error(e));
-     console.log(meetinglink);
+     navigator.clipboard.writeText(joinLink).then().catch(e => console.error(e));
+     console.log(joinLink);
     }
     this.router.navigate(['/meeting'], { queryParams: { channel, link } });
     
