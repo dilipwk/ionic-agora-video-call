@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { TokenService } from '../../shared/services/token.service';
-
+import { Clipboard } from '@ionic-native/clipboard/ngx';
 @Component({
   selector: 'app-meeting-preview',
   templateUrl: './meeting-preview.component.html',
@@ -19,7 +19,8 @@ export class MeetingPreviewComponent implements OnInit, OnDestroy {
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
-    private tokeService: TokenService
+    private tokeService: TokenService,
+    private clipboard: Clipboard
   ) { }
 
   ngOnInit(): void {
@@ -69,10 +70,13 @@ export class MeetingPreviewComponent implements OnInit, OnDestroy {
     if (channel) {
       const joinLink = this.tokeService.getLink(channel);
       let meetinglink = location.origin+"/#/meeting?link="+ joinLink;
+      this.clipboard.copy(joinLink).then().catch(e=>{
+        alert(e);
+      })
       setTimeout(function(){
         alert(`Code copied, You can Invite other people using the code: ${joinLink}`);
      }, 1000)
-     navigator.clipboard.writeText(joinLink).then().catch(e => console.error(e));
+     //navigator.clipboard.writeText(joinLink).then().catch(e => console.error(e));
      console.log(joinLink);
     }
     this.router.navigate(['/meeting'], { queryParams: { channel, link } });

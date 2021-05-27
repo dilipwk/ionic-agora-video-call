@@ -4,7 +4,7 @@
     width: 3.5rem;
     height: 3.5rem;
     border-radius: 50%;
-    background-color: transparent;
+    background-color: #212528;
     overflow: hidden;
     justify-content: center;
     align-items: center;
@@ -13,7 +13,7 @@
 }
 
 .container:hover {
-    background-color: rgba(255,255,255, .65);
+    background-color:#212528;
 }
 
 a {
