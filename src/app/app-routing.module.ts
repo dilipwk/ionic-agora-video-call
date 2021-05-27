@@ -28,10 +28,7 @@ const routes: Routes = [
   { path: 'preview', component: MeetingPreviewComponent },
   { path: 'settings', component: InputOutputSettingsComponent },
   { path: 'meeting', component: MeetingPageComponent}
-  // {
-  //   path: '',
-  //   loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-  // }
+
 ];
 @NgModule({
   declarations: [
