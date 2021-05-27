@@ -1,4 +1,4 @@
-# ionic-agora-video-call
+# Agora SDK Implementation with Ionic
 
 # Find angular version https://github.com/dilipwk/angular-agora-video-call
 
@@ -18,12 +18,12 @@ https://drive.google.com/file/d/1Qw3tLT_CQVSbedSOkdJukmFrmrcpzcTg/view?usp=shari
 
 ## Setup 
 <strong><pre>git clone https://github.com/dilipwk/ionic-agora-video-call</pre></strong>
-<strong><pre> cd angular-agora-video-call </pre></strong>
+<strong><pre> cd ionic-agora-video-call </pre></strong>
 <strong><pre> npm i </pre></strong>
 <strong><pre>npm i ngx-agora-sdk-ng --save </pre></strong>
 <strong><pre>ionic serve</pre></strong>
  
-* Replace your own appId in `agora-appId`. in app-routing.module
+* Replace your own app Id in `agora-appId`. in app-routing.module
 ```ts
 import { NgxAgoraSdkNgModule } from 'ngx-agora-sdk-ng';
 
@@ -41,11 +41,9 @@ export class AppRoutingModule { }
 <strong><pre> cordova plugin add cordova-clipboard </pre></strong>
 * Open AndroidManifest.xml in ionic-agora-video-call/platforms/android/app/src/main/AndroidManifest.xml 
 Add following 
-<strong><pre> 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
-</pre></strong>
 <strong><pre> ionic cordova build android </pre></strong>
 
 ------------
