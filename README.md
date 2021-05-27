@@ -41,9 +41,11 @@ export class AppRoutingModule { }
 <strong><pre> cordova plugin add cordova-clipboard </pre></strong>
 * Open AndroidManifest.xml in ionic-agora-video-call/platforms/android/app/src/main/AndroidManifest.xml 
 Add following 
+```
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
+```
 <strong><pre> ionic cordova build android </pre></strong>
 
 ------------
